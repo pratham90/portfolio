@@ -13,15 +13,24 @@ const SkillSection = ({ title, skills, className }) => (
       {skills.map(({ Icon, name, color }, index) => (
         <div
           key={index}
-          className="flex flex-col justify-start gap-4 items-center p-5 border-transparent rounded-2xl bg-[#d5d8d8ee] overflow-hidden h-25 w-25 sm:w-28 md:w-35 md:h-32 lg:w-36 lg:h-36"
+          className="flex flex-col justify-start lg:gap-7 gap-2 items-center p-5 border-transparent rounded-2xl bg-[#d5d8d8ee] overflow-hidden h-25 w-25 sm:w-28 md:w-35 md:h-32 lg:w-36 lg:h-36"
         >
-          <Icon className={`z-10 text-4xl sm:text-5xl md:text-6xl font-light ${color}`} />
+          <Icon
+            className={`z-10 ${color}`}
+            style={{
+              width: '3rem',
+              height: '3rem',
+              minWidth: '3rem',
+              minHeight: '3rem',
+            }}
+          />
           <h1 className="text-black font-semibold text-sm sm:text-base md:text-lg">{name}</h1>
         </div>
       ))}
     </div>
   </div>
 );
+
 
 const Skills = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -60,7 +69,7 @@ const Skills = () => {
     { Icon: FaReact, name: "React js", color: "text-cyan-500" },
     { Icon: FaNodeJs, name: "Node js", color: "text-green-500" },
     { Icon: SiNextdotjs, name: "Next js", color: "text-black" },
-    { Icon: SiTailwindcss, name: "Tailwind Css", color: "text-cyan-500" },
+    { Icon: SiTailwindcss, name: "TailwindCss", color: "text-cyan-500" },
     { Icon: SiExpress, name: "Express js", color: "text-black" },
   ];
 
