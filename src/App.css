@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* background.css */
+.main{
+font-family: 'Poppins', sans-serif;}
+
+.animated-background {
+    position: fixed; /* <--- changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* behind everything */
+    background: linear-gradient(45deg, #071538, #200b4e, #0b0a3d, #0a2551);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    filter: blur(100px);
+    opacity: 0.6;
+    pointer-events: none; /* so background doesn't block clicks */
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+  
