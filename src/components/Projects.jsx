@@ -1,17 +1,25 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import img1 from "../assets/csi.png";
-import img2 from "../assets/health-minor.png";
+import img2 from "../assets/minor.png";
 import img3 from "../assets/canvas.png";
 import img4 from "../assets/miranda.png";
 import img5 from "../assets/the-Blog.png";
 import img6 from "../assets/netflix.png";
 import img7 from "../assets/amazon.png";
+import img8 from "../assets/Screenshot 2025-06-11 114003.png"
 import { FaGithub } from "react-icons/fa";
 import { WiDirectionUpRight } from "react-icons/wi";
 
 const Projects = () => {
   const projects = [
+    {
+      image: img8,
+      name: "TALK-Real Time CHAT",
+      description: "Using it we can chat with our friends in real time.",
+      githubLink: "https://github.com/pratham90/TALK-real-time-chatapp",
+      liveLink: "https://talk-real-time-chatapp.onrender.com/",
+    },
     {
       image: img1,
       name: "CSI-(COLLEGE CLUB)",
@@ -21,10 +29,10 @@ const Projects = () => {
     },
     {
       image: img2,
-      name: "Health Minor",
+      name: "Health System",
       description: "A health-related project.",
-      githubLink: "https://github.com/pratham90/health-report-system",
-      liveLink: "https://pratham90.github.io/health-report-system/",
+      githubLink: "https://github.com/pratham90/minor-health-system",
+      liveLink: "https://minor-health-system.onrender.com",
     },
     {
       image: img3,
